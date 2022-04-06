@@ -1,8 +1,16 @@
 # Python-MLRModel
-## Transformation of Variables in Multi Linear Regression Models to Solve Multi-Collinearity, Non-Normality and Non-Homoscedasticity of Data
+## Transformation of Variables in Multi Linear Regression Models to Solve Multi-Collinearity of Predictors, Non-Normality and Non-Homoscedasticity of Residuals
 
 ### Project Details
-The project aims to solve the Multi-Collinearity, Non-Normality and Non-Homoscedasticity of a multi-linear regression model by transforming the variables and using Principal Component Analysis.
+The project aims to solve the Multi-Collinearity, Non-Normality and Non-Homoscedasticity present in a multi-linear regression model by transforming the variables and using Principal Component Analysis.
+
+### Input features of the dataset
+The dataset contains data about a student's achievement score which was measured by using an index constructed from some standardized test scores, as well as the possible predictors of this achievement score.
+
+**Response Variable:** Achievement
+
+**Predictor Variables:** School, Family, Peer
+
 (a)	Model 1: Additive MLR Model consisting of all 3 predictors:
 Achieve ~ School + Family + Peer
 
