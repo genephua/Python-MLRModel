@@ -63,17 +63,17 @@ Now that the issues surrounding the normality and homoscedasticity of the model 
 
 ## Model 3: Achieve ~ PC1
  
-![image](https://user-images.githubusercontent.com/102946848/161886049-f8f4b241-5bce-48be-be9e-ab9a1464e3c0.png)
+![image](https://user-images.githubusercontent.com/102946848/161886704-b90928b1-1e8e-4a27-9672-e6bba9a0bc4e.png)
  
 To use the PCA method, we first have to use the PCA function from the sklearn.decomposition to create the principal components. After that, we will then be able to extract the eigen values, eigen vectors and proportion of the variance that each PC is responsible for. As can be seen from above, PC1 accounts for almost all of the variance with it accounting for 98.4% of the variance for the data.
 
 We next have to use the pca.transform function to transform the original 3 predictors into 3 principal components. 	
 
-![image](https://user-images.githubusercontent.com/102946848/161886118-4139d0a3-1573-4064-b24b-27bb830f49ce.png)
+![image](https://user-images.githubusercontent.com/102946848/161887027-5c27a016-a962-4dca-ab8f-0179db90c877.png)
 
 Plotting the scatterplot of the 3 predictors PC1, PC2 and PC3, it can be seen that there is practically no linear correlation between each principal component. This is expected, as by design, principal components are not to be correlated with each other.  
      
-![image](https://user-images.githubusercontent.com/102946848/161886202-71fa7b7a-c95b-4498-bade-20cbdeaad6fa.png)
+![image](https://user-images.githubusercontent.com/102946848/161886985-23b495c0-b208-4825-9a2c-88d3ef7f8508.png)
  
 Plotting the scatter plots between the principal components and the predictors, it can be seen that only PC1 has a strong linear relation with each of the other predictors. This is to be expected as PC1 accounts for 98.4% of the variance in the data. As such only PC1 should be selected and is sufficient to represent the model.
 
@@ -81,16 +81,9 @@ Plotting the scatter plots between the principal components and the predictors, 
 
 The VIF of PC1 is 1, and this proves that the multicollinearity issue that existed before, before using PC1 in place of the 3 other predictors has now been resolved.
 
-## Comparison of Model Fit and Multicollinearity of Model 1, Model 2 and Model 3 (Findings)
-	Model 1	Model 2	Model 3
-R2	0.043	0.206	0.183
-R2 Adj	-0.000	0.170	0.171
-AIC	642.2	304.4	302.4
-BIC	651.2	313.4	306.9
-VIF of Family	37.581	37.581	-
-VIF of Peer	30.212	30.212	-
-VIF of School	83.155	83.155	-
-VIF of PC1	-	-	1
+## Comparison of Model Fit and Multicollinearity of Model 1, Model 2 and Model 3 (Overall Findings)
+
+![image](https://user-images.githubusercontent.com/102946848/161887230-82938d21-3086-4a95-b247-51eef10d263e.png)
 
 ### Model Fit
 Model 3 has the best fit followed by model 2 and then model 3. The values of R2, R2 Adj , AIC and BIC have decreased from Model 1 to Model 2, and have also continued to decrease from Model 2 to Model 3 albeit on a smaller subsequent magnitude. Model 2 accounted for the largest increase in fit from Model 1 as the response factor was transformed and its log was taken to improve the fit of its residuals. This transformation helped to fix the non-normality and non-constant variance of the residuals which were present in Model 1.
