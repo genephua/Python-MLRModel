@@ -53,28 +53,35 @@ Looking at the histogram of both the Achieve response variable and of the residu
 
 Looking at the Omnibus and Jarque-Bera P values of 0.756 and 0.578 respectively, it can be seen that the residuals are now normal (in comparison to figures in model 1) as a result of transforming the response variable.
 
+![image](https://user-images.githubusercontent.com/102946848/161885950-ab74dde2-d19e-4db8-8f6d-6ab2fcb5303e.png)
   
 Running the Breusch Pagan test, we also see that the P value is now 0.944. This is an increase in the figure as compared to model 1, which suggests that the homoscedasticity of the residuals has increased. Cross checking this by looking at the residual plot, it can be seen that the fit of the model has improved as compared to model 1, as the residuals now are more evenly located around the centre of the plot. However, the fit can still be improved. 
 
+### Findings
+
 Now that the issues surrounding the normality and homoscedasticity of the model has been resolved, we can next solve the multicollinearity issue surrounding the predictors. To do this, we can use PCA to transform the predictors.
 
-Model 3: Achieve ~ PC1
+## Model 3: Achieve ~ PC1
  
+![image](https://user-images.githubusercontent.com/102946848/161886049-f8f4b241-5bce-48be-be9e-ab9a1464e3c0.png)
  
-
 To use the PCA method, we first have to use the PCA function from the sklearn.decomposition to create the principal components. After that, we will then be able to extract the eigen values, eigen vectors and proportion of the variance that each PC is responsible for. As can be seen from above, PC1 accounts for almost all of the variance with it accounting for 98.4% of the variance for the data.
 
 We next have to use the pca.transform function to transform the original 3 predictors into 3 principal components. 	
 
- 
-  
+![image](https://user-images.githubusercontent.com/102946848/161886118-4139d0a3-1573-4064-b24b-27bb830f49ce.png)
+
 Plotting the scatterplot of the 3 predictors PC1, PC2 and PC3, it can be seen that there is practically no linear correlation between each principal component. This is expected, as by design, principal components are not to be correlated with each other.  
      
+![image](https://user-images.githubusercontent.com/102946848/161886202-71fa7b7a-c95b-4498-bade-20cbdeaad6fa.png)
  
 Plotting the scatter plots between the principal components and the predictors, it can be seen that only PC1 has a strong linear relation with each of the other predictors. This is to be expected as PC1 accounts for 98.4% of the variance in the data. As such only PC1 should be selected and is sufficient to represent the model.
- 
+
+![image](https://user-images.githubusercontent.com/102946848/161886375-1fc1890f-3c5c-4b56-8da7-23a43b3eb26f.png)
+
 The VIF of PC1 is 1, and this proves that the multicollinearity issue that existed before, before using PC1 in place of the 3 other predictors has now been resolved.
-(b)	Comparison of Model Fit and Multicollinearity of Model 1, Model 2 and Model 3
+
+## Comparison of Model Fit and Multicollinearity of Model 1, Model 2 and Model 3 (Findings)
 	Model 1	Model 2	Model 3
 R2	0.043	0.206	0.183
 R2 Adj	-0.000	0.170	0.171
@@ -85,8 +92,8 @@ VIF of Peer	30.212	30.212	-
 VIF of School	83.155	83.155	-
 VIF of PC1	-	-	1
 
-Model Fit
+### Model Fit
 Model 3 has the best fit followed by model 2 and then model 3. The values of R2, R2 Adj , AIC and BIC have decreased from Model 1 to Model 2, and have also continued to decrease from Model 2 to Model 3 albeit on a smaller subsequent magnitude. Model 2 accounted for the largest increase in fit from Model 1 as the response factor was transformed and its log was taken to improve the fit of its residuals. This transformation helped to fix the non-normality and non-constant variance of the residuals which were present in Model 1.
 
-Multicollinearity
+### Multicollinearity
 Model 3 has the least multicollinearity as compared to Model 1 and Model 2. PC1 was created to solve the multicollinearity issue by replacing the three predictors in Model 3 with it, as it accounts for most (98.45) of the variance in the data. PC1 has a VIF of 1 which is much lower than the VIF of the 3 predictors for Model 1 and Model 2. Both Model 1 and Model 2 have the exact same high VIF figures which shows that both Model 1 and Model 2 have severe multicollinearity amongst their predictors. It is not surprising that the Model 2 has the same VIF figures as Model 1, as nothing was changed in Model 2 from Model 1 to address the multicollinearity issue. 
