@@ -90,3 +90,7 @@ Model 3 has the best fit followed by model 2 and then model 3. The values of R2,
 
 ### Multicollinearity
 Model 3 has the least multicollinearity as compared to Model 1 and Model 2. PC1 was created to solve the multicollinearity issue by replacing the three predictors in Model 3 with it, as it accounts for most (98.45) of the variance in the data. PC1 has a VIF of 1 which is much lower than the VIF of the 3 predictors for Model 1 and Model 2. Both Model 1 and Model 2 have the exact same high VIF figures which shows that both Model 1 and Model 2 have severe multicollinearity amongst their predictors. It is not surprising that the Model 2 has the same VIF figures as Model 1, as nothing was changed in Model 2 from Model 1 to address the multicollinearity issue. 
+
+*Analysis Powered by Python*
+<br />*Python Code: [https://github.com/genephua/Python-MLRModel/blob/main/MLR%20Transformation.ipynb](https://github.com/genephua/Python-MLRModel/blob/main/MLR%20Transformation.ipynb)*
+<br /> *Source: [Achievevment.xlsx](https://github.com/genephua/Python-MLRModel/blob/main/Achievement.xlsx)*
