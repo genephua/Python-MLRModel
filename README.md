@@ -11,19 +11,22 @@ The dataset contains data about a student's achievement score which was measured
 
 **Predictor Variables:** School, Family, Peer
 
-(a)	Model 1: Additive MLR Model consisting of all 3 predictors:
-Achieve ~ School + Family + Peer
+## Model 1: Basic Additive MLR Model consisting of all 3 predictors: Achieve ~ School + Family + Peer
 
-Visual Analysis
+**Visual Analysis**
 
-  
+![image](https://user-images.githubusercontent.com/102946848/161881246-af851a1e-e708-4da2-a390-f8204343276d.png)
 
-
- 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/102946848/161881469-ae391233-a288-4851-a3f9-92b94feb7e9e.png" />
+</p>
 
 Preliminary analysis on the predictors in Model 1 through visual charts such as the heat map and pair plot show that there is high multi collinearity between the predictors. The heat map shows that between each pair of predictors, the strength of the correlation is extremely close to one. The scatter plots in the pair plot for each pair of predictors also show a very strong linear relation which signals high collinearity.
 
-Numerical Analysis
+**Numerical Analysis**
+
+![image](https://user-images.githubusercontent.com/102946848/161881614-1a1228bf-6596-43e6-aa33-9e220411491d.png)
+
  
 
 The severe multicollinearity issue present between predictors is further shown by the high VIF values of the 3 predictors all of which are over 10. Having a VIF figure greater than 10 points to high multicollinearity being present.
