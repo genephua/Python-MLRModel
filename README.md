@@ -1,5 +1,8 @@
 # Python-MLRModel
-Transformation of Multi Linear Regression Models to Solve Multi Collinearity, Non Normality and Non Homoscedastic Present in Data
+## Transformation of Variables in Multi Linear Regression Models to Solve Multi-Collinearity, Non-Normality and Non-Homoscedasticity of Data
+
+### Project Details
+The project aims to solve the Multi-Collinearity, Non-Normality and Non-Homoscedasticity of a multi-linear regression model by transforming the variables and using Principal Component Analysis.
 (a)	Model 1: Additive MLR Model consisting of all 3 predictors:
 Achieve ~ School + Family + Peer
 
