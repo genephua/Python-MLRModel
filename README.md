@@ -27,33 +27,30 @@ Preliminary analysis on the predictors in Model 1 through visual charts such as 
 
 ![image](https://user-images.githubusercontent.com/102946848/161881614-1a1228bf-6596-43e6-aa33-9e220411491d.png)
 
- 
-
 The severe multicollinearity issue present between predictors is further shown by the high VIF values of the 3 predictors all of which are over 10. Having a VIF figure greater than 10 points to high multicollinearity being present.
 
 Checking on the normality assumption of the residuals for the MLR model, it can be seen that the Omnibus and Jarque-Bera P values are < 0.05 which suggests that the residuals are not normal.
 
+![image](https://user-images.githubusercontent.com/102946848/161885203-f6f87b85-dc20-4902-920c-36d637ec4981.png)
   
-
-
- 
-
 Checking on the homoscedastic assumption of the residuals for the MLR model, by calculating the Breusch pagan p value, the p value of 0.3019 suggests that the residuals are homoscedastic. However, plotting a residual graph shows that the residuals are not actually homoscedastic and suggests that the fit of the model can be improved.
+
+### Findings
 
 In summary, Model 1 has the following issues: 1) residuals are not normal, 2) residuals are not homoscedastic and 3) there is high multicollinearity between the predictors. Therefore, to first solve the two issues on the residuals, we can look at transforming the response variable which leads us to Model 2.
 
-Model 2: Investigate log-transformation of response variable Achieve:
-log(Achieve) ~ School + Family + Peer
+## Model 2: Investigate log-transformation of response variable Achieve: log(Achieve) ~ School + Family + Peer
 
-Checking Skewness of Distribution of ‘Achieve’ and of the Residuals
+### Checking Skewness of Distribution of ‘Achieve’ and of the Residuals 
 
+![image](https://user-images.githubusercontent.com/102946848/161885397-e5c5b33a-3884-4ca2-a74a-38242b32e8e1.png)
  
+Looking at the histogram of both the Achieve response variable and of the residuals, it can be seen that they are both of a right skewed distribution. To reduce the right skewness present, the logarithm of the response variable Achieve could be taken to transform it.
 
-Looking at the histogram of both the Achieve response variable and of the residuals, it can be seen that they are both of a right skewed distribution. To reduce the right skewness present, the logarithm of the response variable Achieve could be taken to transform it
-
+![image](https://user-images.githubusercontent.com/102946848/161885642-70d341f8-dcdd-4b57-9ed1-07ffe7ae3c44.png)
   
+## Analysis
 
-Analysis
 Looking at the Omnibus and Jarque-Bera P values of 0.756 and 0.578 respectively, it can be seen that the residuals are now normal (in comparison to figures in model 1) as a result of transforming the response variable.
 
   
